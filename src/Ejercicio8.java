@@ -1,4 +1,4 @@
-package src
+package src;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class Ejercicio8{
 		array1 = new String[5];
 		llenarArray(array1);
 		for (int i = 0;i < array1.length;i++) {
-			System.out.println("\nEl indice " + i + " del array 1 tiene un tamaño de" + array1[i].length + ". Y el indice " + i + " del array 2 tiene un tamaño de " + array2[i].length + ". Por lo tanto: "+ compararIndices(i));
+			System.out.println("\nEl indice " + i + " del array 1 tiene un tamaño de " + array1[i].length() + ". Y el indice " + i + " del array 2 tiene un tamaño de " + array2[i].length() + ". Por lo tanto: "+ compararIndices(i));
 		}
 	}
 
@@ -32,10 +32,14 @@ public class Ejercicio8{
 	}
 
 	public String compararIndices(int indice){
-		if (array1[indice].length == array2[indice].length) {
+		if (array1[indice].length() == array2[indice].length()) {
 			return "Son iguales";
 		} else {
 			return "No son iguales";
 		}
+	}
+
+	public static void main(String[] args) {
+		Ejercicio8 ex = new Ejercicio8();
 	}
 }
